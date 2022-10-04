@@ -1,0 +1,46 @@
+﻿2) Ao analisar a Classe Inversor percebi que o vetor de char invertido tinha tamanho menor que o vetor de char que recebe a String original. Ou seja, não havia tamanho suficiente para fazer a conversão. Alterei a Classe Inversor para o seguinte:
+
+package main;
+
+public class Inversor {
+    public static String inverterString(String texto) {
+        char []letras = texto.toCharArray();
+        char []invertido = new char[letras.length];
+//
+        int index = letras.length - 1;
+        for(char letra : letras) {
+            invertido[index] = letra;
+            index--;
+        }
+        return new String(invertido);
+    }
+}
+
+
+E fiz uma classe Main para chamar o metodo inverterString. Segue Classe Main: 
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Inversor inversor = new Inversor();
+
+        System.out.println("Digite uma string: ");
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+
+        String s2 = inversor.inverterString(s);
+        System.out.println("A nova string é: " + s2);
+    }
+
+}
+
+
+Com essa alteração foi possível inverter Strings.
+
+2 a) Por se tratar de uma String Null não é possível chamar o método que transforma a String original em vetor de char.  
+
+
+
+
