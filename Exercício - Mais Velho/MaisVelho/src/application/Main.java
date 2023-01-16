@@ -38,6 +38,5 @@ public class Main {
         System.out.println("Pessoa mais velha é: " + pessoas[indice].getNome() + " com "+ idadeDoMaisVelho + " anos.");
 
 
-
     }
 }
